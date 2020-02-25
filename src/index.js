@@ -1,5 +1,13 @@
 const express = require('express');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
+
+/**
+ *  Database setup
+ */
+mongoose.connect('mongodb+srv://deploy:uploaddeploy@cluster0-cjk5i.mongodb.net/test?retryWrites=true&w=majority',{
+    useNewUrlParser: true
+});
 
 const app = express();
 
